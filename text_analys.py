@@ -39,7 +39,6 @@ if vyber not in acceptables:
 print(oddelovac)
 
 r = [slovo.strip(",.()") for slovo in TEXTS[vyber-1].split()]
-print (r)
 
 pocet_slov = len(r)
 print(f"There are {pocet_slov} word in the selected text.")
@@ -48,7 +47,7 @@ pocet_slov_prvni_velke = [i for i in r if i.istitle()]
 prvni_velke = len(pocet_slov_prvni_velke)
 print(f"There are {prvni_velke} titlecase words.")
 
-pocet_slov_cele_velke = [i for i in r if i.isupper()]
+pocet_slov_cele_velke = [i for i in r if i.isupper() if i.isalpha()]
 cele_velke = len(pocet_slov_cele_velke)
 print(f"There are {cele_velke} uppercase words.")
 
